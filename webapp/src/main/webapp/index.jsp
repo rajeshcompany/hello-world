@@ -1,22 +1,12 @@
+<!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+</head>
 <body>
 
-<h2>Background Image</h2>
-
-<p>A background image for a p element:</p>
-
-<p style="background-image: url('img_girl.jpg');">
-You can specify background images<br>
-for any visible HTML element.<br>
-In this example, the background image<br>
-is specified for a p element.<br>
-By default, the background-image<br>
-will repeat itself in the direction(s)<br>
-where it is smaller than the element<br>
-where it is specified. (Try resizing the<br>
-browser window to see how the<br>
-background image behaves.
-</p>
+<p>I will display A B C</p>
+<p>I will display &#65; &#66; &#67;</p>
 
 </body>
 </html>
