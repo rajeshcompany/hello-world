@@ -1,22 +1,9 @@
-<html>
-<body>
-
-<h2>Background Image</h2>
-
-<p>A background image for a p element:</p>
-
-<p style="background-image: url('img_girl.jpg');">
-You can specify background images<br>
-for any visible HTML element.<br>
-In this example, the background image<br>
-is specified for a p element.<br>
-By default, the background-image<br>
-will repeat itself in the direction(s)<br>
-where it is smaller than the element<br>
-where it is specified. (Try resizing the<br>
-browser window to see how the<br>
-background image behaves.
-</p>
-
-</body>
-</html>
+a=$(vmstat -s | awk  ' $0 ~ /total memory/ {total=$1 } $0 ~/free memory/ {free=$1} $0 ~/buffer memory/ {buffer=$1} $0 ~/cache/ {cache=$1} END{print (total-free-buffer-cache)/total*100}')
+echo ${a%.*}
+echo "Present cache and swap memory is  $a"
+if [ ${a%.*} -ge 85 ];then
+echo "clearing cache"
+echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'
+else
+echo "No Need to clear cache right now"
+fi
