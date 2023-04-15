@@ -1,24 +1,64 @@
- <form action="action_page.php">
-  <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <title>LOGIN</title>
+</head>
+<body>
+<div class="container">
 
-    <label for="your mail guys"><b>mailid</b></label>
-    <input type="text" placeholder="Enter Email" name="maidid" id="mailid" required>
+    <div id="loginbox" style="margin-top:50px;" class="card card-container">
+        <div align="center" style="margin-bottom: 30px">
+            <img src="images/flipkart_big.png" />
+        </div>
+        <div class="panel panel-info" >
+            <div class="panel-heading">
+                <div class="panel-title">Sign In</div>
+            </div>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <div style="padding-top:30px" class="panel-body" >
+                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                <form id="loginform" class="form-horizontal" role="form" action="warehouses.html" method="post">
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username">
+                    </div>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <hr>
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                    </div>
 
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="funny" class="registerbtn">Register</button>
-  </div>
 
-  <div class="container signin">
-    <p>Already account? <a href="#">Sign in</a>.</p>
-  </div>
-</form> 
+                    <div style="margin-top:10px" class="form-group">
+                        <!-- Button -->
+
+                        <div class="col-sm-12 controls">
+                            <input type="submit" class="btn btn-success btn-large" value="Login"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12 control">
+                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</
+html>
+Footer
